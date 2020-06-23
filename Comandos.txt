@@ -42,9 +42,13 @@ docker run -dti -e "prueba1=HoLA" --name <Contenedor> <imagen> --> -dti(SO con t
 ) -e define variable de entorno
 docker stats <contenedor> muestra estadísticas de uso de memoria
 docker run - u <usuario> se loguea en el contenedor con un usuario, el usuario se debe crear en la imagen
+
+docker run --help | grep memory
+docker run --help | grep cpu
 docker run -m <limite de memoria>
 docker run -cpuset-cpus <0-1> limita a 2 cepus
 docker cp archivo <contenedor><ruta> permite copiar archivos desde afuera del contenedor hacia adentro y viceversa
+docker cp container:/path/del/archivo /path/de/tu/maquina
 docker commit <contenedor> <imagen-resultante> congela  un contenedor y lo transforma en imagen
 docker info | grep -i root muestra el directorio root de docker, se puede cambiar editando el archivo
 /lib/systemd/system/docker.service en la linea execStart agregar --data-root <nueva-ruta>, reiniciar servicio con

@@ -1,0 +1,2 @@
+mysqldump -u root -h 127.0.0.1 -p12345 sys > dump.sql
+mysql -u root -h 127.0.0.1 -p docker-db < dump.sql
