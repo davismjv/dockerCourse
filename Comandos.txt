@@ -1,0 +1,57 @@
+Construir una imágen
+docker build --tag <nombre de imagen> <Dockerfile>
+docker build --tag apache-centos . --> el punto indica el DockerFile del directorio
+
+Historial de una imágen
+docker history -H <nombre de imagen>
+
+Ver contenedores
+docker ps -a
+
+Borran Contenedor:
+docker rm -fv <nombre_contenedor>
+
+Crear un Contendor:
+docker run -d <nombre_imagen> -d indica que se ejecute en segundo plano
+
+docker run -d <nombre_imagen> -d --name<nombre_contenedor> indica que se ejecute en segundo plano
+
+Verlo en la web:
+docker run -d --name<nombre_contenedor> -p 80:80 <nombre_imagen> --> -p mapea el puerto 80 del contenedor al puerto 80 de la maquina
+
+docker logs <nombre del contenedor> permite ver errores
+
+&& --> puede agregar varias capas en una sola linea
+\ --> continua en otra linea
+	
+docker rmi <nombre_imagen> Borrar imagenes
+
+docker images -f dangling =  true muestra imagenes flotantes
+
+docker images -f dangling=true - q xargs docker rmi borrar todas las imagenes flotantes
+
+CONTENEDORES
+docker rename <nombre anterior> <nuevo nombre>	Renombra Contenedor
+docker stop <nombre contenedor>	Detiene contenedor
+docker start <nombre contenedor>	Inicia contenedor
+docker restart <nombre contenedor>	Re-Inicia contenedor
+docker exec -ti <nombre_contenedor> bash --> abre terminar del so del contenedor -t=terminal i = interactivo
+docker exec -ti -u root <nombre_contenedor> bash --> -u usuario
+docker ps -q | xargs docker rm -f --> Elimina todos los contenedores
+docker run -dti -e "prueba1=HoLA" --name <Contenedor> <imagen> --> -dti(SO con terminal lo mantiene corriendo sin CMD
+) -e define variable de entorno
+docker stats <contenedor> muestra estadísticas de uso de memoria
+docker run - u <usuario> se loguea en el contenedor con un usuario, el usuario se debe crear en la imagen
+docker run -m <limite de memoria>
+docker run -cpuset-cpus <0-1> limita a 2 cepus
+docker cp archivo <contenedor><ruta> permite copiar archivos desde afuera del contenedor hacia adentro y viceversa
+docker commit <contenedor> <imagen-resultante> congela  un contenedor y lo transforma en imagen
+docker info | grep -i root muestra el directorio root de docker, se puede cambiar editando el archivo
+/lib/systemd/system/docker.service en la linea execStart agregar --data-root <nueva-ruta>, reiniciar servicio con
+systemctl daemon reload
+systemctl restart docker
+
+COMANDO LINUX
+du -shc * Peso de archivos
+grep "model name" /proc/cpuinfo info del cpu
+grep "model name" /proc/cpuinfo |wc -l cantidad de cpus
