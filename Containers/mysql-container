@@ -1,0 +1,2 @@
+docker run -d -p 3306:3306 --name my-db2 -e "MYSQL_ROOT_PASSWORD=12345" -e "MYSQL_DATABASE=docker-db" -e "MYSQL_USER=docker-user" -e "MYSQL_PASSWORD=12345"  mysql
+
