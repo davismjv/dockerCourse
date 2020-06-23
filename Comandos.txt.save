@@ -1,3 +1,4 @@
+:!
 Construir una imágen
 docker build --tag <nombre de imagen> <Dockerfile>
 docker build --tag apache-centos . --> el punto indica el DockerFile del directorio
@@ -55,9 +56,5 @@ COMANDO LINUX
 du -shc * Peso de archivos
 grep "model name" /proc/cpuinfo info del cpu
 grep "model name" /proc/cpuinfo |wc -l cantidad de cpus
+X
 
-COMANDOS GIT
-
-git add .
-git commit -m "first commit"
-git push -u origin master
