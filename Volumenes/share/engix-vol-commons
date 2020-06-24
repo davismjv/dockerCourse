@@ -1,0 +1,1 @@
+docker run -d -p 80:80 -v /home/davism/docker-images/Volumenes/share/commons:/usr/share/nginx/html nginx

@@ -1,0 +1,2 @@
+docker volume mysql-db
+docker run -d --name mysqldb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=12345 -v mysql-db:/var/lib/mysql mysql

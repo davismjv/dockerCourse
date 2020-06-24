@@ -1,0 +1,1 @@
+docker run -d --name generator -v /home/davism/docker-images/Volumenes/share/commons:/opt generator

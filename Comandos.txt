@@ -55,6 +55,15 @@ docker info | grep -i root muestra el directorio root de docker, se puede cambia
 systemctl daemon reload
 systemctl restart docker
 
+docker run -v <ruta local><ruta del contenedor> crear un volumen de hosts persistente
+docker run -v <ruta del contenedor> crear un volumen anonimo ya que no se indica ruta destino persistent
+
+docker volumen ls --> muestra los volumenes creados
+docker volume create <nombre> crear volumen
+docker volume ls -f dangling=true --> muestra volumenos no refenciados que se pueden eliminar
+docker volume rm --> borra volumen
+docker exec <contenedor> bash -c "cat <ruta archivo>" --> permite ver archivos dentro del contenedor 
+
 COMANDO LINUX
 du -shc * Peso de archivos
 grep "model name" /proc/cpuinfo info del cpu
