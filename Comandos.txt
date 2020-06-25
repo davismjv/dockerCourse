@@ -64,11 +64,22 @@ docker volume ls -f dangling=true --> muestra volumenos no refenciados que se pu
 docker volume rm --> borra volumen
 docker exec <contenedor> bash -c "cat <ruta archivo>" --> permite ver archivos dentro del contenedor 
 
+NETWORK
+docker network ls --> muestra las redes
+docker inspect bridge --> detalles de la red, bridge es el nombre de la red por defecto
+docker network create --help --> muestra ayuda para crear redes
+docker run --network <nombre de red> conecta el contenedor a otra red creada
+docker run --network <nombre de red> --ip <ip> conecta el contenedor a otra red creada indicando ip
+docker network connect <nombre red> <contenedor a conectar a la red> --> conecta contenedores en distintas redes
+docker network disconnect <nombre red> <contenedor a desconectar a la red> --> desconecta contenedores en distintas redes
+docker network rm <red> elimina redes, si hay contenedores en esa red hay que eliminarlos primero
+docker run --network host --> copia la red de la maquina host en el contenedor
+docker run --network none --> crear contenedor sin red
 COMANDO LINUX
 du -shc * Peso de archivos
 grep "model name" /proc/cpuinfo info del cpu
 grep "model name" /proc/cpuinfo |wc -l cantidad de cpus
-
+ip a | grep docker muestra interfaces de red
 COMANDOS GIT
 
 git add .
