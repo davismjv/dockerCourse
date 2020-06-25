@@ -1,3 +1,0 @@
-2020/06/24 21:26:24 [error] 28#28: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
-2020/06/24 21:27:05 [error] 28#28: *1 open() "/usr/share/nginx/html/adfa" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /adfa HTTP/1.1", host: "localhost"
-2020/06/24 21:27:05 [error] 28#28: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
