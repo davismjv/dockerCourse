@@ -75,13 +75,4 @@ docker network disconnect <nombre red> <contenedor a desconectar a la red> --> d
 docker network rm <red> elimina redes, si hay contenedores en esa red hay que eliminarlos primero
 docker run --network host --> copia la red de la maquina host en el contenedor
 docker run --network none --> crear contenedor sin red
-COMANDO LINUX
-du -shc * Peso de archivos
-grep "model name" /proc/cpuinfo info del cpu
-grep "model name" /proc/cpuinfo |wc -l cantidad de cpus
-ip a | grep docker muestra interfaces de red
-COMANDOS GIT
 
-git add .
-git commit -m "first commit"
-git push -u origin master
