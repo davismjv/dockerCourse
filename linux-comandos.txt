@@ -3,3 +3,4 @@ du -shc * Peso de archivos
 grep "model name" /proc/cpuinfo info del cpu
 grep "model name" /proc/cpuinfo |wc -l cantidad de cpus
 ip a | grep docker muestra interfaces de red
+watch <comando> --> ejecuta varias veces el comando

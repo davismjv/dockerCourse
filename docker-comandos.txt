@@ -76,3 +76,7 @@ docker network rm <red> elimina redes, si hay contenedores en esa red hay que el
 docker run --network host --> copia la red de la maquina host en el contenedor
 docker run --network none --> crear contenedor sin red
 
+COMPOSE
+docker-compose up -d --> crea contenedor utilizando archivo yml
+docker-compose down --> Elimina contenedor
+docker-compose -p <nombre proyecto> --> coloca nombre al proyecto para que nosea docker-compose
