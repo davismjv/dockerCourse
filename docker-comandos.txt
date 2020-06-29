@@ -82,3 +82,4 @@ docker-compose down --> Elimina contenedor
 docker-compose -p <nombre proyecto> --> coloca nombre al proyecto para que nosea docker-compose
 Depends on --> indica secuencia de servicios a crear
 docker-compose logs -f --> permite ver los logs de los containers
+Sigue
