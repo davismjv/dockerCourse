@@ -1,1 +1,5 @@
-Volumenes/nginx-vol/
+Compose/apps/wp/data
+Compose/apps/wp/html
+Compose/apps/drupal/data
+Compose/apps/prestahop/data
+Compose/apps/prestashop/html
