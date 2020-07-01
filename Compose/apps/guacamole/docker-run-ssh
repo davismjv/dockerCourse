@@ -1,0 +1,1 @@
+docker run -d --name ssh --network guacamole_net centos-ssh

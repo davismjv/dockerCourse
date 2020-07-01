@@ -1,0 +1,2 @@
+docker run -d -p 5555:80 -e "ENV=dev" -e "VIRTUALIZACION=docker" -m "50mb" --cpuset-cpus 0 --name apache-deb1 apache-deb
+

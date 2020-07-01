@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    container_name: apache-php-deb
+    image: img-apache-deb
+    build: .
+    environment:
+      ENV: dev
+      VIRTUALIZATION: docker
+    mem_limit: 50mb
+    cpuset: "0"
+    volumes:
+      - "$PWD/opt/source1:/var/www/html"
+    ports:
+      - "5555:80"
+    networks:
+      - net
+networks:
+  net:
