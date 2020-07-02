@@ -82,4 +82,14 @@ docker-compose down --> Elimina contenedor
 docker-compose -p <nombre proyecto> --> coloca nombre al proyecto para que nosea docker-compose
 Depends on --> indica secuencia de servicios a crear
 docker-compose logs -f --> permite ver los logs de los containers
-Sigue
+
+REGISTRY
+docker tag <nombre-actual> <host:puerto/nombre-imagen>--> permite "taggear" la imagen antes de subirla al registry local
+docker push <imagen-taggeada> --> sube la imagen al registry
+docker pull <imagen-taggeada> --> baja la image del registry
+--Para crear registry en red
+1. Identificar IP local de la máquina
+2. Editar archivo /lib/systemd/system/docker.service
+3. Buscar linea ExecStart y agregar --insecure-registry <ip:puerto>
+4. Reiniciar system daemon sudo systemctl daemon-reload
+5. Reiniciar servicio de docker sudo systemctl restart docker

@@ -1,0 +1,1 @@
+docker tag hello-world:latest localhost:5000/hello-world
